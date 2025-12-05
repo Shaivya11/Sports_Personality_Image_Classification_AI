@@ -10,7 +10,7 @@ import pandas as pd
 
 dir_path = os.path.dirname(os.path.realpath(__file__))
 print(dir_path)
-cropped_dataset_path = os.path.join(dir_path, "images_dataset\cropped")
+cropped_dataset_path = os.path.join(dir_path, "images_dataset/cropped")
 
     
 def load_ML_model():
@@ -42,8 +42,8 @@ def w2d(img, mode='haar', level=1):
     return imArray_H
 
 def get_cropped_face(image_path):
-    face_cascade = cv2.CascadeClassifier(os.path.join(dir_path, "opencv\haarcascades\haarcascade_frontalface_default.xml"))
-    eye_cascade = cv2.CascadeClassifier(os.path.join(dir_path, "opencv\haarcascades\haarcascade_eye.xml"))
+    face_cascade = cv2.CascadeClassifier(os.path.join(dir_path, "opencv/haarcascades/haarcascade_frontalface_default.xml"))
+    eye_cascade = cv2.CascadeClassifier(os.path.join(dir_path, "opencv/haarcascades/haarcascade_eye.xml"))
     
     img = cv2.imread(image_path)
     gray_img = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
